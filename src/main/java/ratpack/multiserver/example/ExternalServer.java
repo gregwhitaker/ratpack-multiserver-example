@@ -1,12 +1,13 @@
-package ratpack.multiserver.example.internal;
+package ratpack.multiserver.example;
 
 import ratpack.guice.Guice;
-import ratpack.multiserver.example.internal.api.InternalApiModule;
-import ratpack.multiserver.example.internal.api.InternalRoutes;
+import ratpack.multiserver.example.api.external.ExternalApiModule;
+import ratpack.multiserver.example.api.external.ExternalRoutes;
+import ratpack.multiserver.example.service.ServiceModule;
 import ratpack.server.BaseDir;
 import ratpack.server.RatpackServer;
 
-public class InternalServer implements Runnable {
+public class ExternalServer implements Runnable {
 
     @Override
     public void run() {
@@ -20,16 +21,16 @@ public class InternalServer implements Runnable {
     private void startServer() throws Exception {
         RatpackServer.start(s -> s
                 .serverConfig(c -> c
-                        .port(5051)
                         .env()
                         .baseDir(BaseDir.find())
                         .build()
                 )
                 .registry(Guice.registry(b -> b
-                        .module(InternalApiModule.class))
+                        .module(ExternalApiModule.class)
+                        .module(ServiceModule.class))
                 )
                 .handlers(chain -> chain
-                        .insert(InternalRoutes.class)
+                        .insert(ExternalRoutes.class)
                 )
         );
     }

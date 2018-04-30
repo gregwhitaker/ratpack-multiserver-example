@@ -1,7 +1,7 @@
-package ratpack.multiserver.example.internal.api;
+package ratpack.multiserver.example.api.internal;
 
 import com.google.inject.AbstractModule;
-import ratpack.multiserver.example.internal.api.hello.GetHelloCountHandler;
+import ratpack.multiserver.example.api.internal.hello.GetHelloCountHandler;
 
 public class InternalApiModule extends AbstractModule {
 

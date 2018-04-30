@@ -1,4 +1,4 @@
-package ratpack.multiserver.example.external.api;
+package ratpack.multiserver.example.api.external;
 
 import ratpack.func.Action;
 import ratpack.handling.Chain;
