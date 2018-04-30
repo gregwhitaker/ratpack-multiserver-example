@@ -5,7 +5,7 @@ import ratpack.handling.Context;
 import ratpack.handling.Handler;
 import ratpack.multiserver.example.service.hello.HelloMessageService;
 
-public class GetHelloMessageHandler implements Handler {
+public class GetHelloHandler implements Handler {
 
     @Inject
     private HelloMessageService helloMessageService;
