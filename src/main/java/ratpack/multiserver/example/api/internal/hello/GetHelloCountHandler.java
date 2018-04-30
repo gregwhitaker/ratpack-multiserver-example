@@ -13,6 +13,6 @@ public class GetHelloCountHandler implements Handler {
     @Override
     public void handle(Context ctx) throws Exception {
         helloMessageService.getMessageCount()
-                .then(ctx::render);
+                .then(count -> ctx.render(Long.toString(count)));
     }
 }

@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @Singleton
 public class DefaultHelloMessageService implements HelloMessageService {
 
-    private final AtomicLong count = new AtomicLong(0);
+    private static final AtomicLong count = new AtomicLong(0);
 
     @Override
     public Promise<String> getMessage() {
