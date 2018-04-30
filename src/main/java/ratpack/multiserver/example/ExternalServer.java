@@ -3,6 +3,7 @@ package ratpack.multiserver.example;
 import ratpack.guice.Guice;
 import ratpack.multiserver.example.api.external.ExternalApiModule;
 import ratpack.multiserver.example.api.external.ExternalRoutes;
+import ratpack.multiserver.example.config.HelloConfig;
 import ratpack.multiserver.example.service.ServiceModule;
 import ratpack.server.BaseDir;
 import ratpack.server.RatpackServer;
@@ -22,6 +23,8 @@ public class ExternalServer implements Runnable {
         RatpackServer.start(s -> s
                 .serverConfig(c -> c
                         .env()
+                        .yaml("config.yml")
+                        .require("/hello", HelloConfig.class)
                         .baseDir(BaseDir.find())
                         .build()
                 )
