@@ -3,6 +3,25 @@
 
 An example of starting two [Ratpack](https://www.ratpack.io) servers, on different ports, within a single application.
 
+## Running the Example
+1. Start the example by running the following Gradle command:
+
+        $ ./gradlew run
+
+2. Once the application has started access the `/hello` endpoint by running the following command:
+
+        $ curl http://localhost:5050/hello
+
+    You should see the following response:
+    
+        Hello, World!
+        
+3. Next access the `/hello/count` endpoint, hosted on the other port, by running the following command:
+
+        $ curl http://localhost:5051/hello/count
+        
+    You should see that you have accessed the endpoint `1` time.
+
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/ratpack-multiserver-example/issues).
 
