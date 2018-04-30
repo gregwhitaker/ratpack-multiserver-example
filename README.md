@@ -1,5 +1,8 @@
 # ratpack-multiserver-example
 
+## Bugs and Feedback
+For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/ratpack-multiserver-example/issues).
+
 ## License
 MIT License
 
