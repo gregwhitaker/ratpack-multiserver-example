@@ -1,4 +1,6 @@
 # ratpack-multiserver-example
+[![Build Status](https://travis-ci.org/gregwhitaker/ratpack-multiserver-example.svg?branch=master)](https://travis-ci.org/gregwhitaker/ratpack-multiserver-example)
+
 An example of starting two [Ratpack](https://www.ratpack.io) servers, on different ports, within a single application.
 
 ## Bugs and Feedback
