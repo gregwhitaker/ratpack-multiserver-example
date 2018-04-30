@@ -12,6 +12,7 @@ public class GetHelloHandler implements Handler {
 
     @Override
     public void handle(Context ctx) throws Exception {
-
+        helloMessageService.getMessage()
+                .then(ctx::render);
     }
 }
