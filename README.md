@@ -1,4 +1,5 @@
 # ratpack-multiserver-example
+An example of starting two [Ratpack](https://www.ratpack.io) servers, on different ports, within a single application.
 
 ## Bugs and Feedback
 For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/ratpack-multiserver-example/issues).
